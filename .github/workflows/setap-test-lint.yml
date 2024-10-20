@@ -1,0 +1,14 @@
+name: show-setap-test-lint
+
+on: push
+jobs:
+
+  build:
+    
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - run: make say-hello
+			- run: make setup
+			- run: make lint
+			- run: make test
